@@ -104,6 +104,9 @@ app.use( (req, res, next) => {
       }
 
 
+    
+
+
 
 
 
@@ -165,7 +168,7 @@ app.get('/app/', (req, res) => {
     res.end(res.statusCode + ' ' + res.statusMessage)});
 
 app.get('/app/flips/:number',(req, res) => {
-    res.status(200).json({'raw': coinFlips(req.params.number), 'summary': countFlips(coinFlips(req.params.number))});  
+    res.status(200).json({'raw': coinFlips(req.body.number), 'summary': countFlips(coinFlips(req.body.number))});  
     res.type("text/plain")
 });
 
