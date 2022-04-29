@@ -1,7 +1,7 @@
 // Place your server entry point code here
 
 // Serve static HTML files
-app.use(express.static('./public'));
+
 
 // Make Express use its own built-in body parser to handle JSON
 app.use(express.json());
@@ -42,6 +42,7 @@ if (args.help || args.h) {
     process.exit(0)
 }
 
+app.use(express.static('./public'));
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 
