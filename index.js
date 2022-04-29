@@ -10,7 +10,7 @@
 const express = require('express');
 // const minimist = require('minimist');
 const app = express();
-const database = require('src/services/database.js')
+const database = require('./src/services/database.js')
 const morgan = require('morgan')
 const fs = require('fs')
 
